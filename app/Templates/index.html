@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firma Digital de Documentos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">Firma Digital de Archivos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            <section id="hero">
+                <div class="section-inner">
+                    <h1>Este sitio web es un prototipo para firmar digitalmente documentos.</h1>
+                </div>
+            </section>
+
+
+
+
+            <section id="about">
+                <div class="section-inner">
+                    <h2>Firma Digital de Documentos</h2>
+                    <p>Sube un archivo .pdf o .txt</p>
+                    <form action ="" method="post"
+                        enctype="multipart/form-data">
+                        <label for="myfile">Selección de Archivos</label>
+                        <input type="file" id="myfile" name="myfile" />
+                        <br /><br />
+                        <input type="submit" />
+                    </form>
+                    <div class="form-group"> 
+                        <label for="Verification">Verificacion</label>           
+                        <input type="text" class="form-control" id="signed_file" value="{{ signature }}" readonly>         
+                    </div>
+                    <h3>Subir</h3>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="section-inner">
+                    <h2>Si tienen dudas</h2>
+                    <p>Pueden contactar a :</p>
+                    <ul>
+                        <li><a href="A01633812@tec.mx">E-mail de Ernesto</a></li>
+                        <li><a href="A01639918@tec.mx">E-mail de Andrés</a></li>
+                        <li><a href="A01620477@tec.mx">E-mail de Ana Pau</a></li>
+                        <li><a href="A01634804@tec.mx">E-mail de Juan Carlos</a></li>
+                    </ul>
+                </div>
+            </section>
+            {% endblock %}
+        </main>
+    </body>
+</html>
